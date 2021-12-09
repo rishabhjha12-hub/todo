@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=title%></title>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+    <h1 id="page-heading"><i class="fas fa-address-card"></i>Todolist</h1>
+    <form class="form" action="/todo-page" method="POST">
+        <input type="text" name="todo" placeholder="Todo Title" required>
+        <input type="text" name="desc" placeholder="Todo description" required>
+        
+        <input type="date" id="due-date"name="date">
+        <button type="submit"> add task</button>
+    </form>
+    <form action="/deleteTask" method="get">
+        
+    <div class="contacts">
+
+        <ul>
+            <% for(let i of todo_list){%>
+               
+                    <li>
+                        <div>
+                            <span>
+                                
+                                <input type="checkbox" id="done" name=<%=i._id%> >
+                                <label for="checkbox">mark as done</label>
+                               
+                                
+                                <div id="tasktitle">
+                                    <h3>Task title</h3>
+                                    <%=i.todo%>
+
+                                </div>
+                              
+                          
+
+                            </span>
+                            
+                           <div>
+                               
+                            
+                            
+
+                           </div> 
+                           <div>
+                               <div id="desc">
+                                <h3> Task description</h3>
+
+                                <%=i.desc%>
+                            
+
+                               </div>
+                               <div id="date">
+                                   <h3>due date</h3>
+                                   <%=i.date%>
+                               </div>
+                               
+                            
+
+                           </div>
+                          
+                        </div>
+                       
+                      
+        
+                    </li>
+                 
+
+
+                
+              
+               
+               
+                
+            <%}%>
+        </ul>
+        <button class="db">delete task</button>
+    </div>
+    
+   
+      
+    </form>
+   
+   
+</body>
+</html>

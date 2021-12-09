@@ -1,0 +1,53 @@
+ody{
+    margin: 0;
+    font-family: sans-serif;
+ }
+ #page-heading{
+     text-align: center;
+     margin-top:25px ;
+     color: grey;
+ }
+ .contacts ul li{
+     width: 250px;
+     background-color: blue;
+     margin: auto;
+     text-decoration:  none;
+     margin-top: 25px;
+     list-style-type: none;
+     font-size: 2rem;
+ 
+ }
+ /* .contacts ul li:hover{
+     background-color: grey;
+     width: 150px;
+     height: 20px;
+     padding: 5rem;
+     animation: example 3s 1 ease-in-out;
+     
+ } */
+ .form{
+     width: 200px;
+     margin: auto;
+    
+ }
+ .form input{
+     width: 250px;
+     height: 30px;
+     background-color: lavenderblush;
+     padding: 0.2rem;
+ }
+ .form input:hover{
+     background-color: lawngreen;
+ }
+ #tasktitle{
+    border: 2px solid black;
+    background-color: yellow;
+ }
+ #desc{
+     border:  2pxx solid black;
+     background-color: green;
+ }
+ #date{
+    border:  2pxx solid black;
+    background-color: red;
+ }
