@@ -1,4 +1,4 @@
-ody{
+body{
     margin: 0;
     font-family: sans-serif;
  }
@@ -8,7 +8,7 @@ ody{
      color: grey;
  }
  .contacts ul li{
-     width: 250px;
+     /* width: 250px; */
      background-color: blue;
      margin: auto;
      text-decoration:  none;
@@ -51,3 +51,29 @@ ody{
     border:  2pxx solid black;
     background-color: red;
  }
+ .container{
+     display: flex;
+     width: 100%;
+     flex-direction: row;
+     flex-wrap: wrap;
+ }
+ .db{
+     width: 7rem;
+   
+     font-size: 25px;
+     margin-left: 45rem;
+     margin-bottom: 5rem;
+     background-color: blue;
+ }
+ .db:hover{
+     background-color: green;
+ }
+ #add{
+    width: 7rem;
+    margin-top: 20px;
+    font-size: 25px;
+    background-color: blueviolet;
+
+ }
+ #add:hover{background-color: green;}
+ 

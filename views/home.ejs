@@ -6,25 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%=title%></title>
     <link rel="stylesheet" href="/css/home.css">
+   
+
 </head>
 <body>
     <h1 id="page-heading"><i class="fas fa-address-card"></i>Todolist</h1>
+    <!-- creating input for todos -->
     <form class="form" action="/todo-page" method="POST">
         <input type="text" name="todo" placeholder="Todo Title" required>
         <input type="text" name="desc" placeholder="Todo description" required>
         
         <input type="date" id="due-date"name="date">
-        <button type="submit"> add task</button>
+        <button type="submit" id="add"> add task</button>
     </form>
+       <div class="contacts">
     <form action="/deleteTask" method="get">
         
-    <div class="contacts">
+ 
 
         <ul>
             <% for(let i of todo_list){%>
-               
+                <div class="container">
                     <li>
-                        <div>
+                        <div >
                             <span>
                                 
                                 <input type="checkbox" id="done" name=<%=i._id%> >
@@ -69,6 +73,10 @@
                       
         
                     </li>
+
+            
+               
+                
                  
 
 
@@ -79,13 +87,15 @@
                 
             <%}%>
         </ul>
-        <button class="db">delete task</button>
+        <button class="db" id="dba">delete task</button>
     </div>
     
    
       
     </form>
+        </div>
+     
    
-   
+ <script src="/js/home.js"></script>  
 </body>
 </html>

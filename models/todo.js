@@ -14,5 +14,6 @@ const todoSchema=new mongoose.Schema({
         require:true
     }
 })
+//exporting schema
 const Todo= mongoose.model('TOdo',todoSchema);
 module.exports=Todo;

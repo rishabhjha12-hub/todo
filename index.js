@@ -1,14 +1,15 @@
 const express=require('express');
 const app=express();
 const path=require('path');
-// const port=8000;
-const port = Process.env.PORT || 3000 ;
+const port=8000;
+//const port = Process.env.PORT || 3000 ;
 //setting  view engine
 app.set('view engine','ejs');
 app.set('views',path.join(__dirname,'views'));
 //using middlewares
 app.use(express.urlencoded())
 //require database
+
 const db=require('./config/mongoose')
 //require database schema
 const Todo=require('./models/todo')
@@ -16,6 +17,7 @@ const Todo=require('./models/todo')
 
 //accessing static files
 app.use(express.static('assets'));
+
 var todoList=[
     // {
     //     todo:'gym',
@@ -74,6 +76,7 @@ app.post('/todo-page',function(req,res){
                 console.log("error",error);
                 return;
             }
+      
             console.log('********',newTodo);
             return res.redirect('back')
     
@@ -90,14 +93,17 @@ app.get('/deleteTask/',function(req,res){
     // }
     // let id=req.query.id;
     let id = req.query;
+    console.log(id);
     //storing the checked items
     let checkboxes=Object.keys(id).length;
+    console.log(checkboxes)
     for(let i=0;i<checkboxes;i++){
         Todo.findByIdAndDelete(Object.keys(id)[i],function(err){
             if(err){
                         console.log(err);
                         return;
                     }
+            
            return res.redirect('back')
 
         })
